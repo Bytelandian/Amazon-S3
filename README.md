@@ -33,6 +33,10 @@ Goto File → Import → Existing Project into Workspace and then select the MyA
 6. The App can be executed by choosing Run option in the Run menu.
 The app requires Access Key ID and Secret Access Key to use AWS API. These can be added to the credentials file present in "/home/username/.aws/" folder.
 
+#### To use Proxy
+Update file [proxy](proxy.properties), set useProxy=True and add host,port, username and password.
+
+
 ### Interface
 The app gives 3 options:
 
