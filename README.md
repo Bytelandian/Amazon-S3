@@ -15,7 +15,21 @@ For design see [Documentation.pdf](Documentation.pdf).
 ### How to Run
 **Application require AWS Toolkit.**
 
-Steps for compilation using Eclipse IDE (3.6 or above version):
+#### Requirements
+1. AWS Account and S3 Enabled.
+2. The app requires Access Key ID and Secret Access Key to use AWS API. These can be added to the credentials file present in "/home/username/.aws/" folder.
+
+#### Steps using Terminal
+
+>Compile
+
+    javac -cp lib/aws-java-sdk-1.9.23.jar:lib/commons-logging-1.1.3.jar:lib/jackson-databind-2.3.2.jar:lib/jackson-core-2.3.2.jar:lib/jackson-annotations-2.3.0.jar:lib/httpclient-4.3.jar:lib/httpcore-4.3.jar:lib/joda-time-2.2.jar *.java
+
+>Run
+
+    java -cp .:lib/aws-java-sdk-1.9.23.jar:.:lib/commons-logging-1.1.3.jar:lib/jackson-databind-2.3.2.jar:lib/jackson-core-2.3.2.jar:lib/jackson-annotations-2.3.0.jar:lib/httpclient-4.3.jar:lib/httpcore-4.3.jar:lib/joda-time-2.2.jar MyAWS
+
+#### Steps for compilation using Eclipse IDE (3.6 or above version):
 
 1. Install AWS Toolkit for Eclipse.
 
@@ -31,7 +45,6 @@ Window → Preferences → AWS Toolkit → AWS SDK For Java
 5. Import the project 'MyAWS' into Eclipse.
 Goto File → Import → Existing Project into Workspace and then select the MyAWS folder.
 6. The App can be executed by choosing Run option in the Run menu.
-The app requires Access Key ID and Secret Access Key to use AWS API. These can be added to the credentials file present in "/home/username/.aws/" folder.
 
 #### To use Proxy
 Update file [proxy](proxy.properties), set useProxy=True and add host,port, username and password.
